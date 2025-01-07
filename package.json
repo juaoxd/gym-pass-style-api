@@ -1,0 +1,45 @@
+{
+  "name": "03-api-solid",
+  "version": "1.0.0",
+  "description": "GymPass style app.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build --format esm",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui --coverage.enabled=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "9.17.0",
+    "@types/bcrypt": "5.0.2",
+    "@types/node": "22.10.2",
+    "@vitest/coverage-v8": "2.1.8",
+    "@vitest/ui": "2.1.8",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "globals": "15.14.0",
+    "prisma": "6.1.0",
+    "tsup": "8.3.5",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.18.2",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "2.1.8"
+  },
+  "dependencies": {
+    "@prisma/client": "6.1.0",
+    "bcrypt": "5.1.1",
+    "dayjs": "1.11.13",
+    "dotenv": "16.4.7",
+    "fastify": "5.2.0",
+    "zod": "3.24.1"
+  }
+}
