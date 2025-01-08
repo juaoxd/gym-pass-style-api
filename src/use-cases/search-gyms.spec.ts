@@ -1,15 +1,15 @@
 import { expect, describe, it, beforeEach } from 'vitest'
 import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-repository'
-import { SearchGymUseCase } from './search-gyms'
+import { SearchGymsUseCase } from './search-gyms'
 import { Decimal } from '@prisma/client/runtime/library'
 
 let gymsRepository: InMemoryGymsRepository
-let sut: SearchGymUseCase
+let sut: SearchGymsUseCase
 
 describe('Search gym use case', () => {
   beforeEach(async () => {
     gymsRepository = new InMemoryGymsRepository()
-    sut = new SearchGymUseCase(gymsRepository)
+    sut = new SearchGymsUseCase(gymsRepository)
   })
 
   it('should be able to search for gyms', async () => {
