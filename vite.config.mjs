@@ -9,5 +9,8 @@ export default defineConfig({
       all: false,
     },
     exclude: ['**/node_modules/**', '**/build/**'],
+    environmentMatchGlobs: [
+      ['src/http/controllers/**', 'src/vitest-environments/prisma.ts'],
+    ],
   },
 })
